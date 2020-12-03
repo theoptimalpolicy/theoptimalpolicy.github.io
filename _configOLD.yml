@@ -1,0 +1,52 @@
+# Site settings
+title: The Optimal Policy           # title of your website
+SEOTitle: The Optimal Policy          # check out docs for more detail
+description: "Machine Learning & Stuff."    # ...
+
+# SNS settings      
+github_username: andreabonvini     # modify this account to yours
+
+# Build settings
+paginate: 10                # nums of posts in one page
+
+# Sidebar settings
+sidebar: true   # default true
+sidebar-about-description: "Sidebar"
+sidebar-avatar: /img/sidebar.jpg     # use absolute URL.
+
+# Featured Tags
+featured-tags: true  
+featured-condition-size: 1     # A tag will be featured if the size of it is more than this condition value
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+mathjax: true
+
+# Friends
+friends: [
+    {
+        title: "Andrea Bonvini",
+        href: "https://github.com/andreabonvini"
+    },
+]
