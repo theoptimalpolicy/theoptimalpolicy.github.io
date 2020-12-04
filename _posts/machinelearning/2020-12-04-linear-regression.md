@@ -41,13 +41,13 @@ Suppose we have $n$ data samples and we consider $m$ features, then we define:
 
 The *target* vector
 $$
-\mathbf{t}=\begin{pmatrix}t_1\\t_2\\\vdots\\t_n\end{pmatrix}
+\mathbf{t}=\begin{bmatrix}t_1\\t_2\\\vdots\\t_n\end{bmatrix}
 $$
 
 
 The *dataset*
 $$
-\mathbf{X}=\begin{pmatrix}
+\mathbf{X}=\begin{bmatrix}
 \mathbf{x_1}^T
 \\
 \mathbf{x_2}^T
@@ -55,9 +55,9 @@ $$
 \vdots
 \\
 \mathbf{x}_n^T
-\end{pmatrix}
+\end{bmatrix}
 =
-\begin{pmatrix}
+\begin{bmatrix}
 1 && x_{11} && \cdots && x_{1m}
 \\
 1 && x_{21} && \cdots && x_{2m}
@@ -65,7 +65,7 @@ $$
 \vdots && \vdots && \ddots &&\vdots
 \\
 1 &&\cdots && \cdots &&x_{nm}
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 
@@ -74,7 +74,7 @@ Note that the $1$ at the beginning of each row are just to take in account the b
 And the *weights*
 $$
 \mathbf{w}=
-\begin{pmatrix}
+\begin{bmatrix}
 w_0
 \\
 w_1
@@ -84,13 +84,13 @@ w_2
 \vdots
 \\
 w_m
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 
 Then our prediction (that from now on we'll call $y$ ) for the $i_{th}$ sample will be
 $$
-y_i = \mathbf{w}^T\mathbf{x}_i = \begin{pmatrix} 
+y_i = \mathbf{w}^T\mathbf{x}_i = \begin{bmatrix} 
 w_0
 &&
 w_1
@@ -100,9 +100,9 @@ w_2
 \cdots
 &&
 w_m
-\end{pmatrix}
+\end{bmatrix}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 1
 \\
 x_{i1}
@@ -112,13 +112,13 @@ x_{i2}
 \vdots
 \\
 x_{im}
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 
 And our *prediction* vector (which will have dimension $n\times 1$) will be computed as
 $$
-\mathbf{y}=\begin{pmatrix}
+\mathbf{y}=\begin{bmatrix}
 1 && x_{11} && \cdots && x_{1m}
 \\
 1 && x_{21} && \cdots && x_{2m}
@@ -126,7 +126,7 @@ $$
 \vdots && \vdots && \ddots &&\vdots
 \\
 1 &&\cdots && \cdots &&x_{nm}
-\end{pmatrix}\cdot\begin{pmatrix}
+\end{bmatrix}\cdot\begin{bmatrix}
 w_0
 \\
 w_1
@@ -134,7 +134,7 @@ w_1
 \vdots
 \\
 w_m
-\end{pmatrix}=\mathbf{X}\mathbf{w}
+\end{bmatrix}=\mathbf{X}\mathbf{w}
 $$
 
 
@@ -146,7 +146,7 @@ $$
 Where $\epsilon_i$ is just the difference  between the target values $t_i$ and our predictions $y_i$,
 
 $$
-\begin{pmatrix}
+\begin{bmatrix}
 t_1-y_1
 \\
 t_2-y_2
@@ -156,7 +156,7 @@ t_3-y_3
 \vdots
 \\
 t_n-y_n
-\end{pmatrix}=\begin{pmatrix}
+\end{bmatrix}=\begin{bmatrix}
 \epsilon_1
 \\
 \epsilon_2
@@ -166,7 +166,7 @@ t_n-y_n
 \vdots
 \\
 \epsilon_n
-\end{pmatrix}
+\end{bmatrix}
 $$
 To have a visual understanding of what we're talking about, the various $\epsilon_i$ corresponds to the green segments in the image below. 
 
@@ -219,7 +219,7 @@ $$
 $$
 
 $$
-\begin{pmatrix}1 && 1\\1 && 0\\1 && -1\\\end{pmatrix}\cdot\begin{pmatrix}\mathbf{w}_0\\\mathbf{w}_1\\\end{pmatrix}=\begin{pmatrix}4.1\\1.9\\0\end{pmatrix}
+\begin{bmatrix}1 && 1\\1 && 0\\1 && -1\\\end{bmatrix}\cdot\begin{bmatrix}\mathbf{w}_0\\\mathbf{w}_1\\\end{bmatrix}=\begin{bmatrix}4.1\\1.9\\0\end{bmatrix}
 $$
 
 $$
@@ -229,120 +229,120 @@ $$
 $$
 \mathbf{w} = 
 
-\begin{pmatrix}
-\begin{pmatrix}
+\begin{bmatrix}
+\begin{bmatrix}
 1 && 1 && 1\\
 1 && 0 && -1\\
-\end{pmatrix}
+\end{bmatrix}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 1 && 1\\
 1 && 0\\
 1 && -1\\
-\end{pmatrix}
-\end{pmatrix}
+\end{bmatrix}
+\end{bmatrix}
 ^{-1}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 1 && 1 && 1\\
 1 && 0 && -1\\
-\end{pmatrix}
-\begin{pmatrix}
+\end{bmatrix}
+\begin{bmatrix}
 4.1\\
 1.9\\
 0
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 \mathbf{w} = 
-\begin{pmatrix}
+\begin{bmatrix}
 3 && 0\\
 0 && 2
-\end{pmatrix}
+\end{bmatrix}
 ^{-1}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 1 && 1 && 1\\
 1 && 0 && -1\\
-\end{pmatrix}
+\end{bmatrix}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 4.1\\
 1.9\\
 0
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 \mathbf{w} = 
 \frac{1}{6}
-\begin{pmatrix}
+\begin{bmatrix}
 2 && 0\\
 0 && 3
-\end{pmatrix}
+\end{bmatrix}
 
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 1 && 1 && 1\\
 1 && 0 && -1\\
-\end{pmatrix}
+\end{bmatrix}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 4.1\\
 1.9\\
 0
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 \mathbf{w} = 
 
-\begin{pmatrix}
+\begin{bmatrix}
 
 \frac{1}{3} && 0\\
 0 && \frac{1}{2} \\
 
-\end{pmatrix}
+\end{bmatrix}
 
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 1 && 1 && 1\\
 1 && 0 && -1\\
-\end{pmatrix}
+\end{bmatrix}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 4.1\\
 1.9\\
 0
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 \mathbf{w} = 
 
-\begin{pmatrix}
+\begin{bmatrix}
  \frac{1}{3} &&  \frac{1}{3}  && \frac{1}{3}\\
  \frac{1}{2} &&  0  && -\frac{1}{2}
-\end{pmatrix}
+\end{bmatrix}
 \cdot
-\begin{pmatrix}
+\begin{bmatrix}
 4.1\\
 1.9\\
 0
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 \mathbf{w} = 
 
-\begin{pmatrix}
+\begin{bmatrix}
 2.00\\
 2.05
-\end{pmatrix}
+\end{bmatrix}
 $$
 
-In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost function $J(\mathbf{w})$ in the parameter space, we can see that $J(\mathbf{w})$ is a convex function with one single *minimum* and a well defined *bowl shape*. This minimum corresponds to the point $\mathbf{w} = \begin{pmatrix} 2.00\\ 2.05 \end{pmatrix}$, i.e. the blue dot which appears at the base of the *bowl*.
+In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost function $J(\mathbf{w})$ in the parameter space, we can see that $J(\mathbf{w})$ is a convex function with one single *minimum* and a well defined *bowl shape*. This minimum corresponds to the point $\mathbf{w} = \begin{bmatrix} 2.00\\ 2.05 \end{bmatrix}$, i.e. the blue dot which appears at the base of the *bowl*.
 
 <img src="../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/videos/bowl_black.mp4" style="zoom:7 5%;" />
 
@@ -366,7 +366,7 @@ $$
 $$
 
 $$
-\begin{pmatrix}1 && 2\\1 && 2\\1 && 2\\\end{pmatrix}\cdot\begin{pmatrix}\mathbf{w}_0\\\mathbf{w}_1\\\end{pmatrix}=\begin{pmatrix}2\\4\\6\end{pmatrix}
+\begin{bmatrix}1 && 2\\1 && 2\\1 && 2\\\end{bmatrix}\cdot\begin{bmatrix}\mathbf{w}_0\\\mathbf{w}_1\\\end{bmatrix}=\begin{bmatrix}2\\4\\6\end{bmatrix}
 $$
 
 $$
@@ -374,14 +374,14 @@ $$
 $$
 
 $$
-\mathbf{w} =\begin{pmatrix}\begin{pmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{pmatrix}\cdot\begin{pmatrix}1 && 2\\1 && 2\\1 && 2\\\end{pmatrix}\end{pmatrix}^{-1}\cdot\begin{pmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{pmatrix}\begin{pmatrix}2\\4\\6\end{pmatrix}
+\mathbf{w} =\begin{bmatrix}\begin{bmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{bmatrix}\cdot\begin{bmatrix}1 && 2\\1 && 2\\1 && 2\\\end{bmatrix}\end{bmatrix}^{-1}\cdot\begin{bmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{bmatrix}\begin{bmatrix}2\\4\\6\end{bmatrix}
 $$
 
 $$
-\mathbf{w} = \begin{pmatrix}  3&& 6\\6 && 12\end{pmatrix}^{-1}\cdot\begin{pmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{pmatrix}\cdot\begin{pmatrix}2\\4\\6\end{pmatrix}
+\mathbf{w} = \begin{bmatrix}  3&& 6\\6 && 12\end{bmatrix}^{-1}\cdot\begin{bmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{bmatrix}\cdot\begin{bmatrix}2\\4\\6\end{bmatrix}
 $$
 
-As you can see here we can't invert $\begin{pmatrix}  3&& 6\\6 && 12\end{pmatrix}^{-1}$ since its determinant would be $0$ !
+As you can see here we can't invert $\begin{bmatrix}  3&& 6\\6 && 12\end{bmatrix}^{-1}$ since its determinant would be $0$ !
 
 By plotting the cost function $J(\mathbf{w})$ we would obtain a sort of parabolic cylinder
 
