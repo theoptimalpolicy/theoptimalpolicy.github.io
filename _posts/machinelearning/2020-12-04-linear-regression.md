@@ -148,8 +148,6 @@ J(\mathbf{w}) =\\
 $$
 
 Where $\epsilon_i$ is just the difference  between the target values $t_i$ and our predictions $y_i$,
-
-
 $$
 \begin{bmatrix}
 t_1-y_1
@@ -173,8 +171,6 @@ t_n-y_n
 \epsilon_n
 \end{bmatrix}
 $$
-
-
 To have a visual understanding of what we're talking about, the various $\epsilon_i$ corresponds to the green segments in the image below. 
 
 ![](../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/points_line_and_res.png)
