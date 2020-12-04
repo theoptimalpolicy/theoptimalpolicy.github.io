@@ -14,8 +14,6 @@ future: true
 # SNS settings
 RSS: false
 github_username:    andreabonvini
-twitter_username:   huxpro
-#facebook_username:  huxpro
 linkedin_username:  andreabonvini
 
 
