@@ -4,6 +4,7 @@ subtitle: "Let's start with the basics."
 layout: post
 author: "Andrea Bonvini"
 header-style: text
+mathjax:true
 tags:
   - Machine Learning
 ---
