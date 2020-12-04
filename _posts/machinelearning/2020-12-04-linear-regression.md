@@ -29,7 +29,7 @@ Our goal consists in finding the line that better explains the data we have been
 
 ![](../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/points_and_line.png)
 
-This traduces in finding the best weights $\mathbf{w} = [w_0\ \ \ w_1]^T$ such that $\text{(Price in \$)} = w_0 + w_1\cdot (\text{Dimension in $m^2$})$
+This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that $w_0+w_1\cdot(m^2) \simeq\text{Price in \$}$
 
 Now it's time to introduce some formalism.
 
