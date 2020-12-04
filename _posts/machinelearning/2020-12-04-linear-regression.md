@@ -29,14 +29,14 @@ Our goal consists in finding the line that better explains the data we have been
 
 ![](../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/points_and_line.png)
 
-This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that
+This traduces in finding the best weights $ \textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that
 $$
-w_0+w_1\cdot(\text{dimension in }m^2) \simeq\text{Price in \$}
+w_0+w_1\cdot\left(\text{dimension in }m^2\right) \simeq\text{Price in \$}
 $$
 
 Now it's time to introduce some formalism.
 
-For the $i_{th}$ data sample we call our target variable $t_i$ , our features $\mathbf{x}_i$ and the weights that we apply to our features $\mathbf{w}$. Note that $\mathbf{x}_i$ and $\mathbf{w}$ are *column vectors*, while $t_i$ is just a scalar.
+For the $i_{th}$ data sample we call our target variable $t_i$ , our features $\mathbf{x}_i$ and the weights that we apply to our features $\mathbf{w}$. Note that $\mathbf{x}_i$ and $\mathbf{w}$ are column vectors , while $t_i$ is just a scalar.
 
 Suppose we have $n$ data samples and we consider $m$ features, then we define:
 
