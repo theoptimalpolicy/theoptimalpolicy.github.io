@@ -8,8 +8,6 @@ keyword: "Machine Learning, Artificial Intelligence, Computer Vision, Natural La
 #url: "https://huangxuan.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-nightMode: true
-
 # Publish posts or collection documents with a future date.
 future: true
 
@@ -26,7 +24,7 @@ github_username:    andreabonvini
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN  
@@ -77,7 +75,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "About Me"
+sidebar-about-description: "I'm a MSc. Student in Biomedical Engineering @ Politecnico di Milano"
 sidebar-avatar: /img/avatar-andre.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
