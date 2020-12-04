@@ -41,6 +41,8 @@ The *target* vector
 $$
 \mathbf{t}=\begin{pmatrix}t_1\\t_2\\\vdots\\t_n\end{pmatrix}
 $$
+
+
 The *dataset*
 $$
 \mathbf{X}=\begin{pmatrix}
@@ -63,6 +65,8 @@ $$
 1 &&\cdots && \cdots &&x_{nm}
 \end{pmatrix}
 $$
+
+
 Note that the $1$ at the beginning of each row are just to take in account the bias $w_0$ (that would be the intercept in our trivial example) 
 
 And the *weights*
@@ -80,8 +84,9 @@ w_2
 w_m
 \end{pmatrix}
 $$
-Then our prediction (that from now on we'll call $y$ ) for the $i_{th}$ sample will be
 
+
+Then our prediction (that from now on we'll call $y$ ) for the $i_{th}$ sample will be
 $$
 y_i = \mathbf{w}^T\mathbf{x}_i = \begin{pmatrix} 
 w_0
@@ -107,8 +112,9 @@ x_{i2}
 x_{im}
 \end{pmatrix}
 $$
-And our *prediction* vector (which will have dimension $n\times 1$) will be computed as
 
+
+And our *prediction* vector (which will have dimension $n\times 1$) will be computed as
 $$
 \mathbf{y}=\begin{pmatrix}
 1 && x_{11} && \cdots && x_{1m}
@@ -128,13 +134,14 @@ w_1
 w_m
 \end{pmatrix}=\mathbf{X}\mathbf{w}
 $$
-But how can we find the optimal weights? We do that by minimizing the so-called *Mean Squared Error* $J(\mathbf{w})$.
 
+
+But how can we find the optimal weights? We do that by minimizing the so-called *Mean Squared Error* $J(\mathbf{w})$.
 $$
 J(\mathbf{w}) =\\
 \frac{1}{N}\left(\mathbf{t}-\mathbf{y}\right)^T\left(\mathbf{t}-\mathbf{y}\right)=\\\frac{1}{N}\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)
 $$
-Where $\$ is just the difference (or *error* $\$ ) between the target values $\$ and our predictions $\$,
+Where $\epsilon_i$ is just the difference  between the target values $t_i$ and our predictions $y_i$,
 
 $$
 \begin{pmatrix}
@@ -168,8 +175,7 @@ Our cost function is just the Mean Squared Error
 $$
 J(\mathbf{w}) = \frac{1}{N}\sum_{i=1}^n\epsilon_i^2
 $$
-
-Since we would like to minimize this quantity, we derive with respect to $\mathbf{w}$ and set the derivative equal to $0$.
+Since we would like to minimize this quantity, we derive with respect to $\$ and set the derivative equal to $0$.
 
 $$
 J(\mathbf{w}) =
@@ -178,7 +184,6 @@ J(\mathbf{w}) =
 =0
 $$
 Which is equivalent to
-
 $$
 \mathbf{X}^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)=0
 $$
@@ -196,7 +201,7 @@ Now, before tackling the problems relative with such closed form solution, it is
 
 Let's talk now about some problems that can arise from the closed form solution
 
-- The inverse of $\left(\mathbf{X}^T\mathbf{X}\right)$ is computationally expensive when the number of features is high, being the temporal complexity of such inversion $\mathcal{O}(m^3)$.  (Note that $\left(\mathbf{X}^T\mathbf{X}\right)$ has dimensionality equal to $(m+1)\times (m+1)$ )
+- The inverse of $\left(\mathbf{X}^T\mathbf{X}\right)$ is computationally expensive when the number of features is high, being the temporal complexity of such inversion $\mathcal{O}(m^3)$ (Note that $\left(\mathbf{X}^T\mathbf{X}\right)$ has dimensionality equal to $(m+1)\times (m+1)$ )
 - The matrix $\left(\mathbf{X}^T\mathbf{X}\right)$ isn't always invertible since $\mathbf{X}^T\mathbf{X}$ could contain linearly dependent rows, which implies a null *determinant*. In such case we'd have infinite solutions for $\mathbf{w}$.
 
 In order to show this last drawback we'll use a toy example:
