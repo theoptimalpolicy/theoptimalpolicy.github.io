@@ -12,7 +12,6 @@ html {
 }
 body {
   margin: 0;
-  background-color: black;
 }
 article,
 aside,
@@ -66,8 +65,8 @@ h1 {
   font-size: 2em;
 }
 mark {
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #ff0;
 }
 small {
   font-size: 80%;
@@ -194,7 +193,7 @@ th {
   *,
   *:before,
   *:after {
-    color: #fff !important;
+    color: #000 !important;
     text-shadow: none !important;
     background: transparent !important;
     -webkit-box-shadow: none !important;
@@ -1079,7 +1078,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #000;
+  background-color: #fff;
 }
 input,
 button,
@@ -6236,7 +6235,7 @@ button.close {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #000;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
