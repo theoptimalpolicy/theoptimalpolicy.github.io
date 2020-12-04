@@ -180,10 +180,10 @@ $$
 J(\mathbf{w}) = \frac{1}{N}\sum_{i=1}^n\epsilon_i^2
 $$
 
-Since we would like to minimize this quantity, we derive with respect to $\mathbf{w}$ and set the derivative equal to $0$.
+Since we would like to minimize this quantity, we derive with respect to $\mathbf{w}$ and set the derivative equal to $0$ .
 
 $$
-J(\mathbf{w}) =
+J\left(\mathbf{w}\right) =
 \frac{1}{N}\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)\\\frac{\partial J(\mathbf{w})}{\partial \mathbf{w}} =
 -\frac{2}{N}\mathbf{X}^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)
 =0
