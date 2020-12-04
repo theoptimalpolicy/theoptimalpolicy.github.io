@@ -156,7 +156,9 @@ t_3-y_3
 \vdots
 \\
 t_n-y_n
-\end{bmatrix}=\begin{bmatrix}
+\end{bmatrix}
+=
+\begin{bmatrix}
 \epsilon_1
 \\
 \epsilon_2
