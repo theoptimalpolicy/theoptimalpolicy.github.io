@@ -1,3 +1,0 @@
-> Some pretty cool citation... 
-
-Hi, I am Andrea Bonvini and I need to fill this About Me form.
