@@ -30,7 +30,6 @@ Our goal consists in finding the line that better explains the data we have been
 ![](../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/points_and_line.png)
 
 This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that
-
 $$
 w_0+w_1\cdot(\text{dimension in }m^2) \simeq\text{Price in \$}
 $$
@@ -150,6 +149,7 @@ $$
 
 Where $\epsilon_i$ is just the difference  between the target values $t_i$ and our predictions $y_i$,
 
+
 $$
 \begin{bmatrix}
 t_1-y_1
@@ -173,6 +173,8 @@ t_n-y_n
 \epsilon_n
 \end{bmatrix}
 $$
+
+
 To have a visual understanding of what we're talking about, the various $\epsilon_i$ corresponds to the green segments in the image below. 
 
 ![](../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/points_line_and_res.png)
@@ -183,7 +185,7 @@ $$
 J(\mathbf{w}) = \frac{1}{N}\sum_{i=1}^n\epsilon_i^2
 $$
 
-Since we would like to minimize this quantity, we derive with respect to $\$ and set the derivative equal to $0$.
+Since we would like to minimize this quantity, we derive with respect to $\mathbf{w}$ and set the derivative equal to $0$.
 
 $$
 J(\mathbf{w}) =
