@@ -9,12 +9,6 @@ tags:
 mathjax: true
 ---
 
-$a^2$
-
-$$a^2$$
-
-\((a^2\))
-
 Hi everyone, today's topic is *Linear Regression*, one of the most basic, nevertheless powerful, techniques in *machine learning*. In order to fully understand this brief lecture, you should know the basics of linear algebra and the differences between overfitting and underfitting.
 
 ***Introduction***
@@ -44,12 +38,12 @@ For the $i_{th}$ data sample we call our target variable $t_i$ , our features $\
 Suppose we have $n$ data samples and we consider $m$ features, then we define:
 
 The *target* vector
-\\(
+\$$
 \mathbf{t}=\begin{pmatrix}t_1\\t_2\\\vdots\\t_n\end{pmatrix}
-\\)
+\$$
 
 The *dataset*
-\\(
+\$$
 \mathbf{X}=\begin{pmatrix}
 \mathbf{x_1}^T
 \\
@@ -69,12 +63,12 @@ The *dataset*
 \\
 1 &&\cdots && \cdots &&x_{nm}
 \end{pmatrix}
-\\)
+\$$
 
 Note that the $1$ at the beginning of each row are just to take in account the bias $w_0$ (that would be the intercept in our trivial example) 
 
 And the *weights*
-\\(
+\$$
 \mathbf{w}=
 \begin{pmatrix}
 w_0
@@ -87,11 +81,11 @@ w_2
 \\
 w_m
 \end{pmatrix}
-\\)
+\$$
 
 Then our prediction (that from now on we'll call $y$ ) for the $i_{th}$ sample will be
 
-\\(
+\$$
 y_i = \mathbf{w}^T\mathbf{x}_i =
 \begin{pmatrix}
 w_0
@@ -116,11 +110,11 @@ x_{i2}
 \\
 x_{im}
 \end{pmatrix}
-\\)
+\$$
 
 And our *prediction* vector (which will have dimension $n\times 1$) will be computed as
 
-\\(
+\$$
 \mathbf{y}=\begin{pmatrix}
 1 && x_{11} && \cdots && x_{1m}
 \\
@@ -138,20 +132,20 @@ w_1
 \\
 w_m
 \end{pmatrix}=\mathbf{X}\mathbf{w}
-\\)
+\$$
 
 But how can we find the optimal weights? We do that by minimizing the so-called *Mean Squared Error* $J(\mathbf{w})$.
 
-\\(
+\$$
 J(\mathbf{w}) =\\
 \frac{1}{N}\left(\mathbf{t}-\mathbf{y}\right)^T\left(\mathbf{t}-\mathbf{y}\right)=\\
 
 \frac{1}{N}\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)
-\\)
+\$$
 
 Where $\left(\mathbf{t}-\mathbf{y}\right)$ is just the difference (or *error* $\epsilon$ ) between the target values $\mathbf{t}$ and our predictions $\mathbf{y}$,
 
-\\(
+\$$
 \left(\mathbf{t}-\mathbf{y}\right)=
 \begin{pmatrix}
 t_1-y_1
@@ -178,7 +172,7 @@ t_n-y_n
 \\
 \epsilon_n
 \end{pmatrix}
-\\)
+\$$
 
 To have a visual understanding of what we're talking about, the various $\epsilon_i$ corresponds to the green segments in the image below. 
 
@@ -186,33 +180,33 @@ To have a visual understanding of what we're talking about, the various $\epsilo
 
 Our cost function is just the Mean Squared Error
 
-\\(
+\$$
 J(\mathbf{w}) = \frac{1}{N}\sum_{i=1}^n\epsilon_i^2
-\\)
+\$$
 
 Since we would like to minimize this quantity, we derive with respect to $\mathbf{w}$ and set the derivative equal to $0$.
 
-\\(
+\$$
 J(\mathbf{w}) =
 \frac{1}{N}\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)\\
 
 \frac{\partial J(\mathbf{w})}{\partial \mathbf{w}} =
 -\frac{2}{N}\mathbf{X}^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)
 =0
-\\)
+\$$
 
 Which is equivalent to
 
-\\(
+\$$
 \mathbf{X}^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)=0
-\\)
+\$$
 
 We then isolate the weights $\mathbf{w}$.
 
-\\(
+\$$
 \mathbf{X}^T\mathbf{t}=\mathbf{X}^T\mathbf{X}\mathbf{w}\\
 \mathbf{w}=\left(\mathbf{X}^T\mathbf{X}\right)^{-1}\mathbf{X}^T\mathbf{t}
-\\)
+\$$
 
 And that's all!
 
@@ -233,19 +227,19 @@ We have to find a valid predictor for a dataset which contains just three sample
 
 We solve by means of the closed form solution:
 
-\\(
+\$$
 \mathbf{X}\mathbf{w}=\mathbf{t}
-\\)
+\$$
 
-\\(
+\$$
 \begin{pmatrix}1 && 1\\1 && 0\\1 && -1\\\end{pmatrix}\cdot\begin{pmatrix}\mathbf{w}_0\\\mathbf{w}_1\\\end{pmatrix}=\begin{pmatrix}4.1\\1.9\\0\end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w}=\left(\mathbf{X}^T\mathbf{X}\right)^{-1}\mathbf{X}^T\mathbf{t}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = 
 
 \begin{pmatrix}
@@ -271,9 +265,9 @@ We solve by means of the closed form solution:
 1.9\\
 0
 \end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = 
 
 \begin{pmatrix}
@@ -292,9 +286,9 @@ We solve by means of the closed form solution:
 1.9\\
 0
 \end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = 
 \frac{1}{6}
 \begin{pmatrix}
@@ -313,9 +307,9 @@ We solve by means of the closed form solution:
 1.9\\
 0
 \end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = 
 
 \begin{pmatrix}
@@ -336,9 +330,9 @@ We solve by means of the closed form solution:
 1.9\\
 0
 \end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = 
 
 \begin{pmatrix}
@@ -351,16 +345,16 @@ We solve by means of the closed form solution:
 1.9\\
 0
 \end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = 
 
 \begin{pmatrix}
 2.00\\
 2.05
 \end{pmatrix}
-\\)
+\$$
 
 In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost function $J(\mathbf{w})$ in the parameter space, we can see that $J(\mathbf{w})$ is a convex function with one single *minimum* and a well defined *bowl shape*. This minimum corresponds to the point $\mathbf{w} = \begin{pmatrix} 2.00\\ 2.05 \end{pmatrix}$, i.e. the blue dot which appears at the base of the *bowl*.
 
@@ -374,33 +368,33 @@ The above example is the ideal scenario, but it is not always the one you'll be 
 
 Now let's compute the closed form solution for another example:
 
-\\(
+\$$
 \begin{bmatrix}m^2 && price\\2 && 2\\2 && 4\\2 && 6\\\end{bmatrix}\
-\\)
+\$$
 
 <img src="../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/points_ex2.png" style="zoom:55%;" />
 
 Here our data samples are pretty bad since there doesn't seem to be any correlation between the independent variable $(m^2)$ and the dependent variable $(price)$. We will observe that the inversion of the matrix $\mathbf{X}^T\mathbf{X}$ becomes problematic.
 
-\\(
+\$$
 \mathbf{X}\mathbf{w}=\mathbf{t}
-\\)
+\$$
 
-\\(
+\$$
 \begin{pmatrix}1 && 2\\1 && 2\\1 && 2\\\end{pmatrix}\cdot\begin{pmatrix}\mathbf{w}_0\\\mathbf{w}_1\\\end{pmatrix}=\begin{pmatrix}2\\4\\6\end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w}=\left(\mathbf{X}^T\mathbf{X}\right)^{-1}\mathbf{X}^T\mathbf{t}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} =\begin{pmatrix}\begin{pmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{pmatrix}\cdot\begin{pmatrix}1 && 2\\1 && 2\\1 && 2\\\end{pmatrix}\end{pmatrix}^{-1}\cdot\begin{pmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{pmatrix}\begin{pmatrix}2\\4\\6\end{pmatrix}
-\\)
+\$$
 
-\\(
+\$$
 \mathbf{w} = \begin{pmatrix}  3&& 6\\6 && 12\end{pmatrix}^{-1}\cdot\begin{pmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{pmatrix}\cdot\begin{pmatrix}2\\4\\6\end{pmatrix}
-\\)
+\$$
 
 As you can see here we can't invert $\begin{pmatrix}  3&& 6\\6 && 12\end{pmatrix}^{-1}$ since its determinant would be $0$ !
 
