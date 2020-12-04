@@ -12,7 +12,7 @@ html {
 }
 body {
   margin: 0;
-  color: #000000;
+  color: #111111;
 }
 article,
 aside,
@@ -45,7 +45,7 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color: black;
 }
 a:active,
 a:hover {
