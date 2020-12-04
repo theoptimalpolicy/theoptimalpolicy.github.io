@@ -2,10 +2,10 @@
 title: The Optimal Policy
 SEOTitle: The Optimal Policy
 header-img: img/home-bg.jpg
-email: theoptimalpolicy@gmail.com
-description: "Machine Learning & Stuff."
+email: huxpro@gmail.com
+description: "CONFIG DESCRIPTION"
 keyword: "Machine Learning, Artificial Intelligence, Computer Vision, Natural Language Processing, Computational Neuroscience"
-#url: "https://huangxuan.me"              # your host, for absolute URL
+# url: "https://huangxuan.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -14,17 +14,18 @@ future: true
 # SNS settings
 RSS: false
 github_username:    andreabonvini
+twitter_username:   huxpro
 #facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+linkedin_username:  andreabonvini
 
-nightMode: true
+
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN  
@@ -68,15 +69,15 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "I'm a MSc. Student in Biomedical Engineering @ Politecnico di Milano"
-sidebar-avatar: /img/avatar-andre.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -94,8 +95,7 @@ service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: true
-post-mathjax: true
-mathjax: true
+
 
 
 # Friends
@@ -104,14 +104,5 @@ friends: [
         title: "andreabonvini",
         href: "https://github.com/andreabonvini"
     }
+      
 ]
-
-
-colors:
-  black:     '#111111'
-  white:     '#f8f8f8'
-  blue:      '#49a7e9'
-  green:     '#9bcf2f'
-  purple:    '#c869bf'
-  orange:    '#fab125'
-  turquoise: '#0fbfcf'
