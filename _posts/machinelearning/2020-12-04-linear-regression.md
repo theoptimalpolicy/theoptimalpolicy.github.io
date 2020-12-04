@@ -8,6 +8,12 @@ tags:
   - Machine Learning
 ---
 
+$a^2$
+
+$$a^2$$
+
+\((a^2\))
+
 Hi everyone, today's topic is *Linear Regression*, one of the most basic, nevertheless powerful, techniques in *machine learning*. In order to fully understand this brief lecture, you should know the basics of linear algebra and the differences between overfitting and underfitting.
 
 ***Introduction***
