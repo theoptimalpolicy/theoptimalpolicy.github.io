@@ -2,8 +2,6 @@
 title: "Linear Regression"
 subtitle: "Let's start with the basics."
 layout: post
-bg: black
-color: black
 author: "Andrea Bonvini"
 header-style: text
 tags:
