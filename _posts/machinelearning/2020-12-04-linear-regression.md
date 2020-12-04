@@ -41,7 +41,6 @@ The *target* vector
 $$
 \mathbf{t}=\begin{pmatrix}t_1\\t_2\\\vdots\\t_n\end{pmatrix}
 $$
-
 The *dataset*
 $$
 \mathbf{X}=\begin{pmatrix}
@@ -64,7 +63,6 @@ $$
 1 &&\cdots && \cdots &&x_{nm}
 \end{pmatrix}
 $$
-
 Note that the $1$ at the beginning of each row are just to take in account the bias $w_0$ (that would be the intercept in our trivial example) 
 
 And the *weights*
@@ -82,7 +80,6 @@ w_2
 w_m
 \end{pmatrix}
 $$
-
 Then our prediction (that from now on we'll call $y$ ) for the $i_{th}$ sample will be
 
 $$
