@@ -1130,7 +1130,7 @@ samp {
 }
 
 .navbar-custom .navbar-brand:hover {
-	color: rgba(255, 255, 255, .8)
+	color: rgba(0, 0, 0, .8)
 }
 
 .navbar-custom .nav li a {
@@ -1160,7 +1160,7 @@ samp {
 	}
 	.navbar-custom .navbar-brand:hover,
 	.navbar-custom .navbar-brand:focus {
-		color: rgba(255, 255, 255, .8)
+		color: rgba(0, 0, 0, .8)
 	}
 	.navbar-custom .nav li a {
 		color: #fff;
@@ -1168,7 +1168,7 @@ samp {
 	}
 	.navbar-custom .nav li a:hover,
 	.navbar-custom .nav li a:focus {
-		color: rgba(255, 255, 255, .8)
+		color: rgba(0, 0, 0, .8)
 	}
 	.navbar-custom .nav li a:active {
 		background: 0 0
@@ -1217,7 +1217,7 @@ samp {
 	.navbar-custom.is-fixed {
 		position: fixed;
 		top: -61px;
-		background-color: rgba(255, 255, 255, .9);
+		background-color: rgba(0, 0, 0, .9);
 		border-bottom: 1px solid #f2f2f2;
 		-webkit-transition: -webkit-transform .3s;
 		-moz-transition: -moz-transform .3s;
@@ -1641,7 +1641,7 @@ img::-moz-selection {
 .tags a,
 .tags .tag {
 	display: inline-block;
-	border: 1px solid rgba(255, 255, 255, .8);
+	border: 1px solid rgba(0, 0, 0, .8);
 	border-radius: 999em;
 	padding: 0 10px 0 10px;
 	color: #fff;
@@ -1665,7 +1665,7 @@ img::-moz-selection {
 .tags .tag:active {
 	color: #fff;
 	border-color: #fff;
-	background-color: rgba(255, 255, 255, .4);
+	background-color: rgba(0, 0, 0, .4);
 	text-decoration: none
 }
 
@@ -1830,7 +1830,7 @@ img::-moz-selection {
 }
 
 .navbar-default .navbar-toggle:active {
-	background-color: rgba(255, 255, 255, .25)
+	background-color: rgba(0, 0, 0, .25)
 }
 
 .navbar-default .navbar-toggle {
