@@ -349,7 +349,7 @@ $$
 
 In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost function $J(\mathbf{w})$ in the parameter space, we can see that $J(\mathbf{w})$ is a convex function with one single *minimum* and a well defined *bowl shape*. This minimum corresponds to the point $\mathbf{w} = \begin{bmatrix} 2.00\\ 2.05 \end{bmatrix}$, i.e. the blue dot which appears at the base of the *bowl*.
 
-<img src="/img/posts/linear-regression/bowl_black.mp4" style="zoom:7 5%;" />
+<img src="/img/posts/linear-regression/bowl_black.gif" style="zoom:75%;" />
 
 Which corresponds to the following predictor line:
 
