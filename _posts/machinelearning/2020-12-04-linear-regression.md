@@ -19,7 +19,7 @@ We define *regression analysis* as a set of statistical processes for estimating
 
 One trivial example could be estimating the price (*target variable*) of a house starting from the house's dimension expressed in squared meters ($m^2$). In this case, since we are just considering one *feature* (the dimension of the house expressed in $m^2$) our *hyperplane* will consist of a simple *line*.
 
-![](img/posts/linear-regression/points.png)
+![](/img/posts/linear-regression/points.png)
 
 Each dot in the plot corresponds to a real data sample, namely a real correspondence among area and price.  This is how our dataset would look like
 
@@ -27,7 +27,7 @@ Each dot in the plot corresponds to a real data sample, namely a real correspond
 
 Our goal consists in finding the line that better explains the data we have been provided with. 
 
-![](img/posts/linear-regression/points_and_line.png)
+![](/img/posts/linear-regression/points_and_line.png)
 
 This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that $w_0+w_1\cdot\left(\text{dimension in }m^2\right) \simeq\text{Price in \$}$
 
@@ -172,7 +172,7 @@ t_n-y_n
 $$
 To have a visual understanding of what we're talking about, the various $\epsilon_i$ corresponds to the green segments in the image below. 
 
-![](img/posts/linear-regression/points_line_and_res.png)
+![](/img/posts/linear-regression/points_line_and_res.png)
 
 Our cost function is just the Mean Squared Error
 
@@ -204,7 +204,7 @@ And that's all!
 
 Now, before tackling the problems relative with such closed form solution, it is useful to introduce the *parameters-space*, i.e. the space representing all the possible solutions $(w)$ of our problem: in our trivial example this space corresponds to all the possible points $w:(w_0,w_1) \in \mathbb{R}^2$, each of this points traduces in a different predictor (line) in the features-space as you can see in the animation below.
 
-![](img/posts/linear-regression/param_space.mp4)
+![](/img/posts/linear-regression/param_space.mp4)
 
 Let's talk now about some problems that can arise from the closed form solution
 
@@ -215,7 +215,7 @@ In order to show this last drawback we'll use a toy example:
 
 We have to find a valid predictor for a dataset which contains just three samples.
 
-<img src="img/posts/linear-regression/points_ex1.png" style="zoom:50%;" />
+<img src="/img/posts/linear-regression/points_ex1.png" style="zoom:50%;" />
 
 We solve by means of the closed form solution:
 
@@ -349,7 +349,7 @@ $$
 
 In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost function $J(\mathbf{w})$ in the parameter space, we can see that $J(\mathbf{w})$ is a convex function with one single *minimum* and a well defined *bowl shape*. This minimum corresponds to the point $\mathbf{w} = \begin{bmatrix} 2.00\\ 2.05 \end{bmatrix}$, i.e. the blue dot which appears at the base of the *bowl*.
 
-<img src="img/posts/linear-regression/bowl_black.mp4" style="zoom:7 5%;" />
+<img src="/img/posts/linear-regression/bowl_black.mp4" style="zoom:7 5%;" />
 
 Which corresponds to the following predictor line:
 
@@ -363,7 +363,7 @@ $$
 \begin{bmatrix}m^2 && price\\2 && 2\\2 && 4\\2 && 6\\\end{bmatrix}
 $$
 
-<img src="img/posts/linear-regression/points_ex2.png" style="zoom:55%;" />
+<img src="/img/posts/linear-regression/points_ex2.png" style="zoom:55%;" />
 
 Here our data samples are pretty bad since there doesn't seem to be any correlation between the independent variable $(m^2)$ and the dependent variable $(price)$. We will observe that the inversion of the matrix $\mathbf{X}^T\mathbf{X}$ becomes problematic.
 
@@ -391,11 +391,11 @@ As you can see here we can't invert $\begin{bmatrix}  3 && 6 \\ 6 && 12\end{bmat
 
 By plotting the cost function $J(\mathbf{w})$ we would obtain a sort of parabolic cylinder
 
-<img src="img/posts/linear-regression/non-bowl_black.mp4" style="zoom:60%;" />
+<img src="/img/posts/linear-regression/non-bowl_black.mp4" style="zoom:60%;" />
 
 whose minimum has infinite solutions (that we can find by gradient-based techniques), part of these solutions corresponds to the following predictor lines:
 
-<img src="img/posts/linear-regression/lines_non-inv.mp4" style="zoom:45%;" />
+<img src="/img/posts/linear-regression/lines_non-inv.mp4" style="zoom:45%;" />
 
 Lastly it is opportune to remember that our dataset needs to have a number of samples greater than the number of parameters to be learnt.  Being $m$ the number of features of each sample and $n$ the number of samples in our dataset, we need to satisfy the constraint  $n>m+1$.  Let's reason why through a simple example. Suppose that you have been asked to find the model that best explains a dataset made of $2$ samples $(n=2)$. Suppose that each sample is represented by $2$ features $(m=2)$ and that we need to predict a value $t$. In this scenario we are not satisfying the constraint since $2\not>2+1$. What are the consequences? Of course we will get a perfect fit! There are infinite planes $(w_0+w_1x_1+w_2x_2=0)$ which pass through two points!
 
