@@ -353,7 +353,7 @@ In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost fun
 
 Which corresponds to the following predictor line:
 
-<img src="img/posts/linear-regression/points_ex1_line.png" style="zoom:50%;" />
+<img src="/img/posts/linear-regression/points_ex1_line.png" style="zoom:50%;" />
 
 The above example is the ideal scenario, but it is not always the one you'll be dealing with. In fact there are some observations to be done regarding the dataset to be used:
 
@@ -399,7 +399,7 @@ whose minimum has infinite solutions (that we can find by gradient-based techniq
 
 Lastly it is opportune to remember that our dataset needs to have a number of samples greater than the number of parameters to be learnt.  Being $m$ the number of features of each sample and $n$ the number of samples in our dataset, we need to satisfy the constraint  $n>m+1$.  Let's reason why through a simple example. Suppose that you have been asked to find the model that best explains a dataset made of $2$ samples $(n=2)$. Suppose that each sample is represented by $2$ features $(m=2)$ and that we need to predict a value $t$. In this scenario we are not satisfying the constraint since $2\not>2+1$. What are the consequences? Of course we will get a perfect fit! There are infinite planes $(w_0+w_1x_1+w_2x_2=0)$ which pass through two points!
 
-<img src="img/posts/linear-regression/plane_black.mp4" style="zoom:65%;" />
+<img src="/img/posts/linear-regression/plane_black.mp4" style="zoom:65%;" />
 
 We'll find at least a model that passes through all the data, more specifically we'd find one solution in the $n=m+1$ case, and infinite solutions in the $n<m+1$ case. We have found a very bad family of models because they are an exact representation of the training data, which translates into a very obvious overfitting problem. 
 Generally we want $n>>m$.
