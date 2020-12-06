@@ -12,36 +12,36 @@
 }
 
 .sidebar-container {
-	color: #bfbfbf;
+	color: #fff;
 	font-size: 14px
 }
 
 .sidebar-container h5 {
-	color: #a3a3a3;
+	color: #fff;
 	padding-bottom: 1em
 }
 
 .sidebar-container h5 a {
-	color: #a3a3a3!important;
+	color: #fff!important;
 	text-decoration: none
 }
 
 .sidebar-container a {
-	color: #bfbfbf!important
+	color: #404040
 }
 
-.sidebar-container a:hover,
-.sidebar-container a:active {
-	color: #0085a1!important
+.sidebar-container a:active,
+.sidebar-container a:hover {
+	color: #ffe7a8!important
 }
 
 .sidebar-container .tags a {
 	border-color: #bfbfbf
 }
 
-.sidebar-container .tags a:hover,
-.sidebar-container .tags a:active {
-	border-color: #0085a1
+.sidebar-container .tags a:active,
+.sidebar-container .tags a:hover {
+	border-color: #ffe7a8
 }
 
 .sidebar-container .short-about img {
@@ -770,7 +770,8 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 	line-height: 1.7;
 	font-size: 16px;
-	color: #404040;
+	color: #fff;
+	background-color: #0d0d0d;
 	overflow-x: hidden;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
