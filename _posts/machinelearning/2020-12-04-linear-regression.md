@@ -23,7 +23,7 @@ One trivial example could be estimating the price (*target variable*) of a house
 
 Each dot in the plot corresponds to a real data sample, namely a real correspondence among area and price.  This is how our dataset would look like
 
-<img src="../../../../Projects/Github/TheOptimalPolicy/theoptimalpolicy/markdowns/LinearRegression/LinearRegressionMedia/images/df_black.png" style="zoom:47%;" />
+<img src="/img/posts/linear-regression/df_black.png" style="zoom:47%;" />
 
 Our goal consists in finding the line that better explains the data we have been provided with. 
 
