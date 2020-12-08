@@ -23,7 +23,7 @@ One trivial example could be estimating the price (*target variable*) of a house
 
 Each dot in the plot corresponds to a real data sample, namely a real correspondence among area and price.  This is how our dataset would look like
 
-<img src="/img/posts/linear-regression/df_black.png" style="zoom:18%;" />
+<img src="/img/posts/linear-regression/df_black.png" style="zoom:38%;" />
 
 Our goal consists in finding the line that better explains the data we have been provided with. 
 
@@ -206,7 +206,7 @@ Now, before tackling the problems relative with such closed form solution, it is
 
 
 
-<video width="900" height="600" controls>
+<video width="700" height="460" controls>
   <source src="https://theoptimalpolicy.github.io/img/posts/linear-regression/param_space.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -354,7 +354,7 @@ $$
 
 In this case $\mathbf{X}^T\mathbf{X}$ is invertible and, if we plot the cost function $J(\mathbf{w})$ in the parameter space, we can see that $J(\mathbf{w})$ is a convex function with one single *minimum* and a well defined *bowl shape*. This minimum corresponds to the point $\mathbf{w} = \begin{bmatrix} 2.00\\ 2.05 \end{bmatrix}$, i.e. the blue dot which appears at the base of the *bowl*.
 
-<video width="900" height="600" controls>
+<video width="700" height="460" controls>
   <source src="https://theoptimalpolicy.github.io/img/posts/linear-regression/bowl_black.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -399,21 +399,21 @@ As you can see here we can't invert $\begin{bmatrix}  3 && 6 \\ 6 && 12\end{bmat
 
 By plotting the cost function $J(\mathbf{w})$ we would obtain a sort of parabolic cylinder
 
-<video width="900" height="600" controls>
+<video width="700" height="460" controls>
   <source src="https://theoptimalpolicy.github.io/img/posts/linear-regression/non-bowl_black.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 whose minimum has infinite solutions (that we can find by gradient-based techniques), part of these solutions corresponds to the following predictor lines:
 
-<video width="900" height="600" controls>
+<video width="700" height="460" controls>
   <source src="https://theoptimalpolicy.github.io/img/posts/linear-regression/lines_non-inv.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 Lastly it is opportune to remember that our dataset needs to have a number of samples greater than the number of parameters to be learnt.  Being $m$ the number of features of each sample and $n$ the number of samples in our dataset, we need to satisfy the constraint  $n>m+1$.  Let's reason why through a simple example. Suppose that you have been asked to find the model that best explains a dataset made of $2$ samples $(n=2)$. Suppose that each sample is represented by $2$ features $(m=2)$ and that we need to predict a value $t$. In this scenario we are not satisfying the constraint since $2\not>2+1$. What are the consequences? Of course we will get a perfect fit! There are infinite planes $(w_0+w_1x_1+w_2x_2=0)$ which pass through two points!
 
-<video width="900" height="600" controls>
+<video width="700" height="460" controls>
   <source src="https://theoptimalpolicy.github.io/img/posts/linear-regression/plane_black.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
