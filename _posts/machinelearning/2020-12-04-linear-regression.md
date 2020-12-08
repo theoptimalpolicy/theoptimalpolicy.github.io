@@ -207,7 +207,7 @@ Now, before tackling the problems relative with such closed form solution, it is
 
 
 <video width="600" height="400" controls>
-  <source src="https://theoptimalpolicy.github.io/theoptimalpolicy/img/posts/linear-regression/param_space.mp4" type="video/mp4">
+  <source src="https://theoptimalpolicy.github.io/img/posts/linear-regression/param_space.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
