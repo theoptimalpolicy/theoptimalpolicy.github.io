@@ -204,6 +204,16 @@ And that's all!
 
 Now, before tackling the problems relative with such closed form solution, it is useful to introduce the *parameters-space*, i.e. the space representing all the possible solutions $(w)$ of our problem: in our trivial example this space corresponds to all the possible points $w:(w_0,w_1) \in \mathbb{R}^2$, each of this points traduces in a different predictor (line) in the features-space as you can see in the animation below.
 
+
+
+<video width="600" height="400" controls>
+  <source src="https://theoptimalpolicy.github.io/theoptimalpolicy/img/posts/linear-regression/param_space.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+
+
 ![](/img/posts/linear-regression/param_space.gif)
 
 Let's talk now about some problems that can arise from the closed form solution
