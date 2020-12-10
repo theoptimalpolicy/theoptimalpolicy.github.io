@@ -233,13 +233,15 @@ We can notice that the old constraint $\mathbf{w}=\sum_{n=1}^{N}\alpha_n y_n\mat
 How do we find the solution? we throw this objective (which btw happens to be a *convex* function) to a *quadratic programming* package.
 
 Once the *quadratic programming* package gives us back the solution we find out that a whole bunch of $\alpha$ are just $0$ !  All the $\alpha$ which are not $0$ are the ones associated with the so-called *support vectors* ! ( which are just samples from our dataset )  
-They are called *support* vectors because they are the vectors that determine the width of the *margin* , this can be noted by observing the last *KKT* condition  
-$\big\{\alpha_n(y_n(\mathbf{w}^T\mathbf{x}_n+b)-1)=0\;\;\;\forall{n}\big\}$,   
-in fact either a constraint is active, and hence the point is a support vector, or its multiplier is zero. 
+They are called *support* vectors because they are the vectors that determine the width of the *margin* , this can be noted by observing the last *KKT* condition
 
-![](img/posts/support-vector-machines/margin2.jpg)
+$$
+\big\{\alpha_n(y_n(\mathbf{w}^T\mathbf{x}_n+b)-1)=0\;\;\;\forall{n}\big\}
+$$
 
-Now that we solved the problem we can get both $\mathbf{w}$  and $b$.
+in fact either a constraint is active, and hence the point is a support vector, or its multiplier is zero.
+
+Now that we solved the problem we can get both $\mathbf{w}$ and $b$.
 
 $$
 \mathbf{w} = \sum_{\mathbf{x}_n \in \text{ SV}}\alpha_ny_n\mathbf{x}_n\\
