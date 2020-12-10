@@ -81,7 +81,9 @@ $$
 \mathbf{w} = [w_0,w_1,\dots,w_D]^T\\
 \mathbf{x} = [1,x_1,\dots,x_D]^T
 $$
+
 If $D=2$ we have that
+
 $$
 \text{hyperplane: }\\
 w_0+w_1x_1+w_2x_2=0\\
@@ -91,7 +93,7 @@ $$
 
 As you may have guessed from the animation above, we can naturally discern a *better* classifier from another one if the former is able to correctly classify the data *and* presents a *larger* distance from the nearest data point in the input space. You can see that, in the image below, all the points crossed by the dotted lines have the same distance from the hyperplane (the *red* line in the middle) and are indeed the *nearest* points to the hyperplane. 
 
-![](img/posts/support-vector-machines/margin.jpg)
+![](/img/posts/support-vector-machines/margin.jpg)
 
 So, let be $\mathbf{x}_N$ the nearest data point to the *hyperplane* $\mathbf{w}^T\mathbf{x} = 0$ , before finding the distance we just have to state two observations:
 
@@ -127,7 +129,7 @@ And of course $\mathbf{w}^T\mathbf{x}'' +b - (\mathbf{w}^T\mathbf{x}' +b)=\mathb
 
 Since $\mathbf{x}''-\mathbf{x}'$ is a vector which lays on the *hyperplane* , we deduce that $\mathbf{w}$ is orthogonal to the *hyperplane*.
 
-![](img/posts/support-vector-machines/im1.png)
+![](/img/posts/support-vector-machines/im1.png)
 
 Then the distance from $\mathbf{x}_N$ to the *hyperplane* can be expressed as a dot product between $\mathbf{x}_N-\mathbf{x}$ (where $\mathbf{x}$ is any point belonging to the plane) and the unit vector $\hat{\mathbf{w}}$ , where $\hat{\mathbf{w}} = \frac{\mathbf{w}}{||\mathbf{w}||}$ ( the distance is just the projection of $\mathbf{x}_N-\mathbf{x}$ in the direction of $\hat{\mathbf{w}}$ !)
 
@@ -137,7 +139,7 @@ $$
 
 (We take the absolute value since we don't know if $\mathbf{w}$ is facing $\mathbf{x}_N$ or is facing the other direction )
 
-![](img/posts/support-vector-machines/im2.png)
+![](/img/posts/support-vector-machines/im2.png)
 
 We'll now try to simplify our notion of *distance*.
 
@@ -201,7 +203,7 @@ We can easily get the two conditions for the unconstrained part:
 
 $$
 \nabla_{\mathbf{w}}\mathcal{L}=\mathbf{w}-\sum_{n=1}^{N}\alpha_n y_n\mathbf{x}_n = 0 \;\;\;\;\;\;\;\; \mathbf{w}=\sum_{n=1}^{N}\alpha_n y_n\mathbf{x}_n\\
-\frac{\part\mathcal{L}}{\part b} = -\sum_{n=1}^{N}\alpha_n y_n = 0\;\;\;\;\;\;\;\;\;\;\;\sum_{n=1}^{N}\alpha_n y_n=0
+\frac{\partial\mathcal{L}}{\partial b} = -\sum_{n=1}^{N}\alpha_n y_n = 0\;\;\;\;\;\;\;\;\;\;\;\sum_{n=1}^{N}\alpha_n y_n=0
 $$
 
 And list the other *KKT* conditions:
