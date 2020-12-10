@@ -195,7 +195,9 @@ J\left(\mathbf{w}\right) =
 -\frac{2}{N}\mathbf{X}^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)
 =0
 $$
+
 Which is equivalent to
+
 $$
 \mathbf{X}^T\left(\mathbf{t}-\mathbf{X}\mathbf{w}\right)=0
 $$
