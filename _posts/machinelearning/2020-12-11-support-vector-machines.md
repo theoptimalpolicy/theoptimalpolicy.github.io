@@ -17,25 +17,25 @@ In this blog-post we are gonna talk about one of the most powerful and fascinati
 
 In the field of Statistical Learning the *Support Vector Machine* technique is a *binary classification* algorithm which aims to find the hyperplane which is able to separate the data with the largest *margin* possible. The concept of margin is illustrated in the following images.
 
-Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$
+Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in\{-1,+1\}$
 
-<img src="/img/posts/support-vector-machines/01_points2.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/01_points2.png" style="zoom:40%;" />
 
 We want to find the best hyperplane (in this case a *line*) which is able to correctly separate the data.
 
-<img src="/img/posts/support-vector-machines/02_classification_line.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/02_classification_line.png" style="zoom:40%;" />
 
 We identify this hyperplane by maximizing the *margin*, i.e. the distance from the *hyperplane* to the closest points of both classes, we call this points *support vectors*.
 
-<img src="/img/posts/support-vector-machines/03_who_are_the_support_vectors.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/03_who_are_the_support_vectors.png" style="zoom:40%;" />
 
 In this case we identified two *support vectors*, they are called like that because they support the dashed lines, which represent the set of points equidistant from the separating hyperplane.
 
-<img src="/img/posts/support-vector-machines/04_margins.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/04_margins.png" style="zoom:40%;" />
 
 The *margins* from the support vectors to the hyperplane are drawed in red
 
-<img src="/img/posts/support-vector-machines/05_distances.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/05_distances.png" style="zoom:40%;" />
 
 Before diving into the theory of the algorithm let's have a look at the history behind it.
 
@@ -49,25 +49,25 @@ After almost $30$ years, at the end of $1990$, *Vapnik* moved to the USA and joi
 
 ### Premise on *linear* classifiers
 
-For a *binary* classification problem, one can visualize the operation of a linear classifier as splitting a high-dimensional input space of dimension $d$ with an *hyperplane* of dimension $d$ (which, as you'll see in a minute, corresponds to a $d-1$ dimensional space): all points on one side of the hyperplane are classified as "yes", while the others are classified as "no". In case you doubt the power of linear classifiers just observe that we're always able to transform (or enrich) our input space by means of some *basis functions*, if we "guess" the right transformation maybe we are able to correctly classify our samples with a *linear* classifier.
+For a *binary* classification problem, one can visualize the operation of a linear classifier as splitting a high-dimensional input space of dimension $d$ with an *hyperplane* of dimension $d$ (which, as you'll see in a minute, corresponds to a $d-1$ dimensional space): all points on one side of the hyperplane are classified as $+1$ (or $-1$), while the others are classified as $-1$ (or $+1$). In case you doubt the power of linear classifiers just observe that we're always able to transform (or enrich) our input space by means of some *basis functions*, if we "guess" the right transformation maybe we are able to correctly classify our samples with a *linear* classifier.
 
-If, for instance, we apply a trivial transformation on the $y$ coordinate of the 2D input space represented below,
+If, for instance, we have the following unseparable data in the 2D space
 
 <img src="/img/posts/support-vector-machines/outer_points2D.png" style="zoom:40%;" />
 
-If, instead, we observe that transforming the actual coordinates of the input space doesn't allow us a better representation of the data, there's nothing stopping us from enriching the input space with some new coordinates which depend on the old features. 
+there's nothing stopping us from enriching the input space with some new coordinates which depend on the old features, e.g. by adding a new dimension $x_3 = \sqrt{x_1^2+x_2^2}$
+
+<video width="700" height="460" controls>
+  <source src="https://theoptimalpolicy.github.io/img/posts/support-vector-machines/svm.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 This way, in the new 3D input space, we are able to correctly classify the data by means of a 2D *plane*.
 
-<img src="img/posts/support-vector-machines/svm.mp4" style="zoom:40%;" />
-
-(Note that $X_3 = \sqrt{x_1^2+x_2^2}$ )
-
-<img src="img/posts/support-vector-machines/plane_appears.mp4" style="zoom:40%;" />
-
-<img src="img/posts/support-vector-machines/rotate.mp4" style="zoom:40%;" />
-
-
+<video width="700" height="460" controls>
+  <source src="https://theoptimalpolicy.github.io/img/posts/support-vector-machines/rotate.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ### Derivation
 
@@ -89,11 +89,7 @@ w_0+w_1x_1+w_2x_2=0\\
 \mathbf{x} = [1,x_1,x_2]^T
 $$
 
-As you may have guessed from the animation above, we can naturally discern a *better* classifier from another one if the former is able to correctly classify the data *and* presents a *larger* distance from the nearest data point in the input space. You can see that, in the image below, all the points crossed by the dotted lines have the same distance from the hyperplane (the *red* line in the middle) and are indeed the *nearest* points to the hyperplane. 
-
-![](/img/posts/support-vector-machines/margin.jpg)
-
-So, let be $\mathbf{x}_N$ the nearest data point to the *hyperplane* $\mathbf{w}^T\mathbf{x} = 0$ , before finding the distance we just have to state two observations:
+Let $\mathbf{x}_N$ be the nearest data point to the *hyperplane* $\mathbf{w}^T\mathbf{x} = 0$ , before finding the distance we just have to state two observations:
 
 - Let's say I multiply the vector $\mathbf{w}$ by $1000000$ , I get the *same* hyperplane! So any formula that takes $\mathbf{w}$ and produces the margin will have to have built-in *scale-invariance*, we do that by normalizing $\mathbf{w}$ , requiring that for the nearest data point $\mathbf{x}_N$:
   $$
