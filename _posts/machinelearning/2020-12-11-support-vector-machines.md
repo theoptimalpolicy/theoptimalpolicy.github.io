@@ -1,18 +1,3 @@
----
-title: "Support Vector Machines"
-subtitle: "The math behind SVMs"
-layout: post
-author: "Andrea Bonvini"
-header-style: text
-tags:
-  - Machine Learning
-  - Kernel Methods
-  - Binary Classification
-mathjax: true
-
-
----
-
 ### Introduction &  Brief History
 
 In this blog-post we are gonna talk about one of the most powerful and fascinating techniques in Machine Learning:  about the Support Vector Machine.
@@ -51,7 +36,7 @@ After almost $30$ years, at the end of $1990$, *Vapnik* moved to the USA and joi
 
 ### Premise on *linear* classifiers
 
-For a *binary* classification problem, one can visualize the operation of a linear classifier as splitting a high-dimensional input space of dimension $d$ with an *hyperplane* of dimension $d$ (which, as you'll see in a minute, corresponds to a $d-1$ dimensional input-space): all points on one side of the hyperplane are classified as "yes", while the others are classified as "no". In case you doubt the power of linear classifiers just observe that we're always able to transform (or enrich) our input space by means of some *basis functions*, if we "guess" the right transformation maybe we are able to correctly classify our samples with a *linear* classifier.
+For a *binary* classification problem, one can visualize the operation of a linear classifier as splitting a high-dimensional input space of dimension $d$ with an *hyperplane* of dimension $d$ (which, as you'll see in a minute, corresponds to a $d-1$ dimensional space): all points on one side of the hyperplane are classified as "yes", while the others are classified as "no". In case you doubt the power of linear classifiers just observe that we're always able to transform (or enrich) our input space by means of some *basis functions*, if we "guess" the right transformation maybe we are able to correctly classify our samples with a *linear* classifier.
 
 If, for instance, we apply a trivial transformation on the $y$ coordinate of the 2D input space represented below,
 
