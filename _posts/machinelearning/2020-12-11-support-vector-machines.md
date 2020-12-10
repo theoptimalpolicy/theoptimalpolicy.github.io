@@ -17,25 +17,25 @@ In this blog-post we are gonna talk about one of the most powerful and fascinati
 
 In the field of Statistical Learning the *Support Vector Machine* technique is a *binary classification* algorithm which aims to find the hyperplane which is able to separate the data with the largest *margin* possible. The concept of margin is illustrated in the following images.
 
-Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$ (to read $\to$ either $-1$ or $+1$)
+Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$
 
 <img src="/img/posts/support-vector-machines/01_points2.png" style="zoom:50%;" />
 
 We want to find the best hyperplane (in this case a *line*) which is able to correctly separate the data.
 
-<img src="img/posts/support-vector-machines/02_classification_line.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/02_classification_line.png" style="zoom:50%;" />
 
 We identify this hyperplane by maximizing the *margin*, i.e. the distance from the *hyperplane* to the closest points of both classes, we call this points *support vectors*.
 
-<img src="img/posts/support-vector-machines/03_who_are_the_support_vectors.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/03_who_are_the_support_vectors.png" style="zoom:50%;" />
 
-In this case we identified *two* *support vectors*, they are called like that because they support the dashed lines, which represent the set of points A DISTANZA == MARGINE from the separating hyperplane
+In this case we identified two *support vectors*, they are called like that because they support the dashed lines, which represent the set of points equidistant from the separating hyperplane.
 
-<img src="img/posts/support-vector-machines/04_margins.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/04_margins.png" style="zoom:50%;" />
 
-The *margins* from the support vectors to the hyperplane are drawed in red (SUONA MALE!)
+The *margins* from the support vectors to the hyperplane are drawed in red
 
-<img src="img/posts/support-vector-machines/05_distances.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/05_distances.png" style="zoom:50%;" />
 
 Before diving into the theory of the algorithm let's have a look at the history behind it.
 
@@ -53,9 +53,7 @@ For a *binary* classification problem, one can visualize the operation of a line
 
 If, for instance, we apply a trivial transformation on the $y$ coordinate of the 2D input space represented below,
 
-<img src="img/posts/support-vector-machines/inner_points2D.png" style="zoom:40%;" />
-
-<img src="img/posts/support-vector-machines/outer_points2D.png" style="zoom:40%;" />
+<img src="/img/posts/support-vector-machines/outer_points2D.png" style="zoom:40%;" />
 
 If, instead, we observe that transforming the actual coordinates of the input space doesn't allow us a better representation of the data, there's nothing stopping us from enriching the input space with some new coordinates which depend on the old features. 
 
