@@ -45,7 +45,7 @@ $$
 
 The *dataset*
 
-$$
+`$$
 \mathbf{X}=\begin{bmatrix}
 \mathbf{x_1}^T
 \\
@@ -65,7 +65,7 @@ $$
 \\
 1 &&\cdots && \cdots &&x_{nm}
 \end{bmatrix}
-$$
+$$`
 
 Note that the $1$ at the beginning of each row are just to take in account the bias $w_0$ (that would be the intercept in our trivial example) 
 
