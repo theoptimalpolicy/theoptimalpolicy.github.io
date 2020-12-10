@@ -1,8 +1,23 @@
+---
+title: "Support Vector Machines"
+subtitle: "The math behind SVMs"
+layout: post
+author: "Andrea Bonvini"
+header-style: text
+tags:
+  - Machine Learning
+  - Kernel Methods
+  - Binary Classification
+mathjax: true
+
+
+---
+
 ### Introduction &  Brief History
 
-Hi guys! Today we are gonna talk about one of the most powerful and fascinating techniques in Machine Learning: I'm talking about the Support Vector Machine.
+In this blog-post we are gonna talk about one of the most powerful and fascinating techniques in Machine Learning:  about the Support Vector Machine.
 
-In the field of Statistical Learning the *Support Vector Machine* technique is a *binary classification* algorithm which aims to find the hyperplane which is able to separate the data with the largest *margin* possible. This he concept of margin is illustrated in the following images.
+In the field of Statistical Learning the *Support Vector Machine* technique is a *binary classification* algorithm which aims to find the hyperplane which is able to separate the data with the largest *margin* possible. The concept of margin is illustrated in the following images.
 
 Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$ (to read $\to$ either $-1$ or $+1$) 
 
@@ -40,29 +55,25 @@ For a *binary* classification problem, one can visualize the operation of a line
 
 If, for instance, we apply a trivial transformation on the $y$ coordinate of the 2D input space represented below,
 
-<img src="img/support-vector-machines/inner_points2D.png" style="zoom:40%;" />
+<img src="img/posts/support-vector-machines/inner_points2D.png" style="zoom:40%;" />
 
-<img src="img/supoprt-vector-machines/outer_points2D.png" style="zoom:40%;" />
+<img src="img/posts/support-vector-machines/outer_points2D.png" style="zoom:40%;" />
 
 If, instead, we observe that transforming the actual coordinates of the input space doesn't allow us a better representation of the data, there's nothing stopping us from enriching the input space with some new coordinates which depend on the old features. 
 
 This way, in the new 3D input space, we are able to correctly classify the data by means of a 2D *plane*.
 
-<img src="img/support-vector-machines/svm.mp4" style="zoom:40%;" />
+<img src="img/posts/support-vector-machines/svm.mp4" style="zoom:40%;" />
 
 (Note that $X_3 = \sqrt{x_1^2+x_2^2}$ )
 
-<img src="img/support-vector-machines/plane_appears.mp4" style="zoom:40%;" />
+<img src="img/posts/support-vector-machines/plane_appears.mp4" style="zoom:40%;" />
 
-<img src="img/support-vector-machines/rotate.mp4" style="zoom:40%;" />
+<img src="img/posts/support-vector-machines/rotate.mp4" style="zoom:40%;" />
 
 
 
 ### Derivation
-
-***How can we define the "optimal" linear classifier?***
-
-![](gifs/gif1.gif)
 
 First of all, we should be familiar with the equation of a generic $D$-dimensional hyperplane:
 
