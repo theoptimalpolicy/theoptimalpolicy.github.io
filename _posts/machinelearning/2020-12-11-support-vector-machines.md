@@ -53,7 +53,7 @@ For a *binary* classification problem, one can visualize the operation of a line
 
 If, for instance, we have the following unseparable data in the 2D space
 
-<img src="/img/posts/support-vector-machines/outer_points2D.png" style="zoom:40%;" />
+<img src="/img/posts/support-vector-machines/outer_points2D.png" style="zoom:25%;" />
 
 there's nothing stopping us from enriching the input space with some new coordinates which depend on the old features, e.g. by adding a new dimension $x_3 = \sqrt{x_1^2+x_2^2}$
 
