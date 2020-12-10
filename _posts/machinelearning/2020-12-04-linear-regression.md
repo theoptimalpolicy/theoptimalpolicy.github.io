@@ -440,7 +440,6 @@ Your browser does not support the video tag.
 </video>
 
 We'll find at least a model that passes through all the data, more specifically we'd find one solution in the $n=m+1$ case, and infinite solutions in the $n<m+1$ case. We have found a very bad family of models because they are an exact representation of the training data, which translates into a very obvious overfitting problem. 
-Generally we want $n>>m$.
+Generally we want $n >{}> m$.
 
-That was it for today's lecture, thanks for your attention!
 
