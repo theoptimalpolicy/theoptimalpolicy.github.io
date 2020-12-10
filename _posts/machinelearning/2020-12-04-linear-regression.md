@@ -41,18 +41,18 @@ Suppose we have $n$ data samples and we consider $m$ features, then we define:
 
 The *target* vector
 
-\\[
+$$
 \mathbf{t} = \begin{bmatrix}t_1\\
 t_2\\
 \vdots
 \\
 t_n
 \end{bmatrix}
-\\]
+$$
 
 The *dataset*
 
-\\[
+$$
 \mathbf{X}=\begin{bmatrix}
 \mathbf{x_1}^T
 \\ 
@@ -71,7 +71,7 @@ The *dataset*
 \vdots && \vdots && \ddots &&\vdots
 \\ 1 &&\cdots && \cdots &&x_{nm}
 \end{bmatrix}
-\\]
+$$
 
 Note that the $1$ at the beginning of each row are just to take in account the bias $w_0$ (that would be the intercept in our trivial example) 
 
