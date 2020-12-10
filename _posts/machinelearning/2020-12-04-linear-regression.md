@@ -29,7 +29,9 @@ Our goal consists in finding the line that better explains the data we have been
 
 ![](/img/posts/linear-regression/points_and_line.png)
 
-This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that $w_0+w_1\cdot\left(\text{dimension in }m^2\right) \simeq\text{Price}$
+This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that 
+
+\\[w_0+w_1\cdot\left(\text{dimension in }m^2\right) \simeq\text{Price}\\]
 
 Now it's time to introduce some formalism.
 
@@ -40,7 +42,12 @@ Suppose we have $n$ data samples and we consider $m$ features, then we define:
 The *target* vector
 
 \\[
-\mathbf{t} = \begin{bmatrix}t_1 \\ t_2 \\ \vdots \\ t_n \end{bmatrix}
+\mathbf{t} = \begin{bmatrix}t_1\\
+t_2\\
+\vdots
+\\
+t_n
+\end{bmatrix}
 \\]
 
 The *dataset*
