@@ -1,6 +1,6 @@
 ---
-title: "Kernel Methods"
-subtitle: "What's the use of Kernels in Machine Learning?"
+title: "Support Vector Machines"
+subtitle: "The math behind SVMs"
 layout: post
 author: "Andrea Bonvini"
 header-style: text
@@ -9,8 +9,6 @@ tags:
   - Kernel Methods
   - Binary Classification
 mathjax: true
-
-
 ---
 
 ### Introduction &  Brief History
@@ -21,7 +19,7 @@ In the field of Statistical Learning the *Support Vector Machine* technique is a
 
 Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$ (to read $\to$ either $-1$ or $+1$)
 
-<img src="img/posts/support-vector-machines/01_points2.png" style="zoom:50%;" />
+<img src="/img/posts/support-vector-machines/01_points2.png" style="zoom:50%;" />
 
 We want to find the best hyperplane (in this case a *line*) which is able to correctly separate the data.
 
