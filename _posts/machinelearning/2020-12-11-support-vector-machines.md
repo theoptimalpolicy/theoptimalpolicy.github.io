@@ -128,17 +128,17 @@ Since $\mathbf{x}''-\mathbf{x}'$ is a vector which lays on the *hyperplane* , we
 Then the distance from $\mathbf{x}_N$ to the *hyperplane* can be expressed as a dot product between $\mathbf{x}_N-\mathbf{x}$ (where $\mathbf{x}$ is any point belonging to the plane) and the unit vector $\hat{\mathbf{w}}$ , where $\hat{\mathbf{w}} = \frac{\mathbf{w}}{||\mathbf{w}||}$ ( the distance is just the projection of $\mathbf{x}_N-\mathbf{x}$ in the direction of $\hat{\mathbf{w}}$ !)
 
 $$
-distance = |\;\hat{\mathbf{w}}^T(\mathbf{x}_N-\mathbf{x})\;|
+distance = |\hat{\mathbf{w}}^T(\mathbf{x}_N-\mathbf{x})|
 $$
 
-(We take the absolute value since we don't know if $\mathbf{w}$ is facing $\mathbf{x}_N$ or is facing the other direction )
+We take the absolute value since we don't know if $\mathbf{w}$ is facing $\mathbf{x}_N$ or is facing the other direction 
 
 ![](/img/posts/support-vector-machines/im2.png)
 
 We'll now try to simplify our notion of *distance*.
 
 $$
-distance = |\;\hat{\mathbf{w}}^T(\mathbf{x}_N-\mathbf{x})\;| = \frac{1}{||\mathbf{w}||}|\;\mathbf{w}^T\mathbf{x}_N-\mathbf{w}^T\mathbf{x}\;|
+\text{distance} = |\hat{\mathbf{w}}^T(\mathbf{x}_N-\mathbf{x})\;| = \frac{1}{||\mathbf{w}||}|\;\mathbf{w}^T\mathbf{x}_N-\mathbf{w}^T\mathbf{x}|
 $$
 
 This can be simplified if we add and subtract the missing term $b$.
@@ -153,7 +153,7 @@ $$
 distance = \frac{1}{||\mathbf{w}||}|\;\mathbf{w}^T\mathbf{x}_N+b\;|
 $$
 
-But wait...what is $|\;\mathbf{w}^T\mathbf{x}_N+b\;|$ ? It is the constraint that we defined at the beginning of our derivation!
+But wait... what is $|\mathbf{w}^T\mathbf{x}_N+b|$ ? It is the constraint that we defined at the beginning of our derivation!
 
 $$
 |\mathbf{w}^T\mathbf{x}_N+b|=1
