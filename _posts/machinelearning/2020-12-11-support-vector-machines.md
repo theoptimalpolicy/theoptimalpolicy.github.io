@@ -1,28 +1,43 @@
+---
+title: "Kernel Methods"
+subtitle: "What's the use of Kernels in Machine Learning?"
+layout: post
+author: "Andrea Bonvini"
+header-style: text
+tags:
+  - Machine Learning
+  - Kernel Methods
+  - Binary Classification
+mathjax: true
+
+
+---
+
 ### Introduction &  Brief History
 
 In this blog-post we are gonna talk about one of the most powerful and fascinating techniques in Machine Learning:  about the Support Vector Machine.
 
 In the field of Statistical Learning the *Support Vector Machine* technique is a *binary classification* algorithm which aims to find the hyperplane which is able to separate the data with the largest *margin* possible. The concept of margin is illustrated in the following images.
 
-Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$ (to read $\to$ either $-1$ or $+1$) 
+Suppose we have a set of points in $\mathbb{R}^2$, each point belongs to a class $\in \{-1,+1\}$ (to read $\to$ either $-1$ or $+1$)
 
-<img src="img/support-vector-machines/01_points2.png" style="zoom:50%;" />
+<img src="img/posts/support-vector-machines/01_points2.png" style="zoom:50%;" />
 
 We want to find the best hyperplane (in this case a *line*) which is able to correctly separate the data.
 
-<img src="img/support-vector-machines/02_classification_line.png" style="zoom:50%;" />
+<img src="img/posts/support-vector-machines/02_classification_line.png" style="zoom:50%;" />
 
 We identify this hyperplane by maximizing the *margin*, i.e. the distance from the *hyperplane* to the closest points of both classes, we call this points *support vectors*.
 
-<img src="img/support-vector-machines/03_who_are_the_support_vectors.png" style="zoom:50%;" />
+<img src="img/posts/support-vector-machines/03_who_are_the_support_vectors.png" style="zoom:50%;" />
 
 In this case we identified *two* *support vectors*, they are called like that because they support the dashed lines, which represent the set of points A DISTANZA == MARGINE from the separating hyperplane
 
-<img src="img/support-vector-machines/04_margins.png" style="zoom:50%;" />
+<img src="img/posts/support-vector-machines/04_margins.png" style="zoom:50%;" />
 
 The *margins* from the support vectors to the hyperplane are drawed in red (SUONA MALE!)
 
-<img src="img/support-vector-machines/05_distances.png" style="zoom:50%;" />
+<img src="img/posts/support-vector-machines/05_distances.png" style="zoom:50%;" />
 
 Before diving into the theory of the algorithm let's have a look at the history behind it.
 
@@ -78,7 +93,7 @@ $$
 
 As you may have guessed from the animation above, we can naturally discern a *better* classifier from another one if the former is able to correctly classify the data *and* presents a *larger* distance from the nearest data point in the input space. You can see that, in the image below, all the points crossed by the dotted lines have the same distance from the hyperplane (the *red* line in the middle) and are indeed the *nearest* points to the hyperplane. 
 
-![](images/margin.jpg)
+![](img/posts/support-vector-machines/margin.jpg)
 
 So, let be $\mathbf{x}_N$ the nearest data point to the *hyperplane* $\mathbf{w}^T\mathbf{x} = 0$ , before finding the distance we just have to state two observations:
 
@@ -114,7 +129,7 @@ And of course $\mathbf{w}^T\mathbf{x}'' +b - (\mathbf{w}^T\mathbf{x}' +b)=\mathb
 
 Since $\mathbf{x}''-\mathbf{x}'$ is a vector which lays on the *hyperplane* , we deduce that $\mathbf{w}$ is orthogonal to the *hyperplane*.
 
-![](images/im1.png)
+![](img/posts/support-vector-machines/im1.png)
 
 Then the distance from $\mathbf{x}_N$ to the *hyperplane* can be expressed as a dot product between $\mathbf{x}_N-\mathbf{x}$ (where $\mathbf{x}$ is any point belonging to the plane) and the unit vector $\hat{\mathbf{w}}$ , where $\hat{\mathbf{w}} = \frac{\mathbf{w}}{||\mathbf{w}||}$ ( the distance is just the projection of $\mathbf{x}_N-\mathbf{x}$ in the direction of $\hat{\mathbf{w}}$ !)
 
@@ -124,7 +139,7 @@ $$
 
 (We take the absolute value since we don't know if $\mathbf{w}$ is facing $\mathbf{x}_N$ or is facing the other direction )
 
-![](images/im2.png)
+![](img/posts/support-vector-machines/im2.png)
 
 We'll now try to simplify our notion of *distance*.
 
@@ -228,7 +243,7 @@ They are called *support* vectors because they are the vectors that determine th
 $\big\{\alpha_n(y_n(\mathbf{w}^T\mathbf{x}_n+b)-1)=0\;\;\;\forall{n}\big\}$,   
 in fact either a constraint is active, and hence the point is a support vector, or its multiplier is zero. 
 
-![](images/margin2.jpg)
+![](img/posts/support-vector-machines/margin2.jpg)
 
 Now that we solved the problem we can get both $\mathbf{w}$  and $b$.
 
