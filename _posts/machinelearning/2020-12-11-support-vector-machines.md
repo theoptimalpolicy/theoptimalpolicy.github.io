@@ -264,7 +264,7 @@ $$
 \mathcal{L}(\mathbf{\alpha}) =\sum_{n=1}^{N}\alpha_n-\frac{1}{2}\sum_{n=1}^{N}\sum_{m=1}^{M}y_n y_m\alpha_n\alpha_mk(\mathbf{x}_n,\mathbf{x}_m)
 $$
 
-We can use *kernels* !! (if you don't know what I'm talking about read the *kernel* related question present somewhere in this document)
+We can use *kernels* ! (if you don't know what I'm talking about just check [this](https://theoptimalpolicy.github.io/2020/12/04/kernels/) one)
 
 Finally we end up with the following equation for classifying *new points*:
 
