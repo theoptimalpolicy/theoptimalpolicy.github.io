@@ -404,7 +404,7 @@ $$
 \mathbf{w} = \begin{bmatrix}  3&& 6\\6 && 12\end{bmatrix}^{-1}\cdot\begin{bmatrix}1 && 1 && 1\\2 && 2 && 2\\\end{bmatrix}\cdot\begin{bmatrix}2\\4\\6\end{bmatrix}
 $$
 
-As you can see here we can't invert $\begin{bmatrix}  3 && 6\\6 && 12\end{bmatrix}^{-1}$ since its determinant would be $0$ !
+As you can see here we can't invert $\begin{bmatrix}3&&6\\6&&12\end{bmatrix}^{-1}$ since its determinant would be $0$ !
 
 By plotting the cost function $J(\mathbf{w})$ we would obtain a sort of parabolic cylinder
 
