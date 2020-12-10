@@ -125,7 +125,7 @@ Since $\mathbf{x}''-\mathbf{x}'$ is a vector which lays on the *hyperplane* , we
 
 ![](/img/posts/support-vector-machines/im1.png)
 
-Then the distance from $\mathbf{x}_N$ to the *hyperplane* can be expressed as a dot product between $\mathbf{x}_N-\mathbf{x}$ (where $\mathbf{x}$ is any point belonging to the plane) and the unit vector $\hat{\mathbf{w}}$ where $\hat{\mathbf{w}} = \frac{\mathbf{w}}{||\mathbf{w}||}$
+Then the distance from $\mathbf{x}_N$ to the *hyperplane* can be expressed as a dot product between $\mathbf{x}_N-\mathbf{x}$ (where $\mathbf{x}$ is any point belonging to the plane) and the unit vector $\hat{\mathbf{w}}$ where $\hat{\mathbf{w}} = \frac{\mathbf{w}}{\vert\vert\mathbf{w}\vert\vert}$
 
 (the distance is just the projection of $\mathbf{x}_N-\mathbf{x}$ in the direction of $\hat{\mathbf{w}}$!)
 
