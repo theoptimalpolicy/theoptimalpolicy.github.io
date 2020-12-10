@@ -29,7 +29,7 @@ Our goal consists in finding the line that better explains the data we have been
 
 ![](/img/posts/linear-regression/points_and_line.png)
 
-This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that $w_0+w_1\cdot\left(\text{dimension in }m^2\right) \simeq\text{Price in \$}$
+This traduces in finding the best weights $\textbf{w} = \begin{bmatrix}w_0 \\ w_1\end{bmatrix}$ such that $ w_0+w_1\cdot\left(\text{dimension in }m^2\right) \simeq\text{Price in \$} $
 
 Now it's time to introduce some formalism.
 
