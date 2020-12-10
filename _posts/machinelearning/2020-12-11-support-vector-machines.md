@@ -155,16 +155,16 @@ $$
 distance = \frac{1}{||\mathbf{w}||}|\;\mathbf{w}^T\mathbf{x}_N+b\;|
 $$
 
-But wait... what is $|\mathbf{w}^T\mathbf{x}_N+b|$ ? It is the constraint that we defined at the beginning of our derivation!
+But wait... what is $\vert\mathbf{w}^T\mathbf{x}_N+b\vert$ ? It is the constraint that we defined at the beginning of our derivation!
 
 $$
-|\mathbf{w}^T\mathbf{x}_N+b|=1
+\vert\mathbf{w}^T\mathbf{x}_N+b\vert=1
 $$
 
 So we end up with the formula for the distance being just
 
 $$
-distance = \frac{1}{||\mathbf{w}||}
+distance = \frac{1}{\vert\vert\mathbf{w}\vert\vert}
 $$
 
 Let's now formulate the optimization problem, we have:
