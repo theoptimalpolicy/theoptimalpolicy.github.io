@@ -405,7 +405,7 @@ $$
 $$
 
 As you can see here we can't invert 
-$
+$$
 \begin{bmatrix}
 3
 &&
@@ -415,7 +415,7 @@ $
 &&
 12
 \end{bmatrix}^{-1}
-$ 
+$$
  since its determinant would be $0$ !
 
 By plotting the cost function $J(\mathbf{w})$ we would obtain a sort of parabolic cylinder
