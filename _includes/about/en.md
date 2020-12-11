@@ -2,6 +2,4 @@
 >
 > Fedor Dostoevskij
 
-Hi Everyone!
-
-My name is Andrea Bonvini and I'm currently pursuing my MSc. in Biomedical Engineering @ Politecnico di Milano. My main interest are Machine Learning, Deep Learning and Computational Neuroscience. During my academic years I wrote a series of notes which I'm going to share here as brief (notalwaysthecase) Blog-Posts in order to provide useful resources for the ML community.
+My name is Andrea Bonvini and I'm currently pursuing my MSc. in Biomedical Engineering @ Politecnico di Milano. My main interest are Machine Learning, Deep Learning and Computational Neuroscience. During my academic years I wrote a series of notes which I'm going to share here as brief (notalwaysthecase) Blog-Posts in order to provide useful resources for the ML community, check them out! ;D
