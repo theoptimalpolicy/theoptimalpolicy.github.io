@@ -1586,8 +1586,8 @@ footer .copyright a:focus {
 .pager li>a:hover,
 .pager li>a:focus {
 	color: #fff;
-	background-color: #4F4B43;
-	border: 1px solid #4F4B43;
+	background-color: #000009;
+	border: 1px solid #ffffff;
 }
 
 .pager li>a:hover>span,
