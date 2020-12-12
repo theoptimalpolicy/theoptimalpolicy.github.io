@@ -11,8 +11,13 @@ tags:
 mathjax: true
 ---
 
-We want to prove that
 
+
+In this brief we want to prove a passage of the original GANs Paper by Ian Goodfellow.
+
+---
+
+We want to prove that
 $$
 \int_{\mathbf{z}}p_{z}(\mathbf{z})\log(1-\mathcal{D}(\mathcal{G}(\mathbf{z})))d\mathbf{z}
 =
