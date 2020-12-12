@@ -1,6 +1,6 @@
 ---
 title: "LOTUS Theorem in GANs"
-subtitle: "How do we apply lOTUS Theorem to GANs' original value-function."
+subtitle: "How do we apply LOTUS Theorem to GANs' original value-function."
 layout: post
 author: "Andrea Bonvini"
 header-style: text
@@ -12,6 +12,7 @@ mathjax: true
 ---
 
 We want to prove that
+
 $$
 \int_{\mathbf{z}}p_{z}(\mathbf{z})\log(1-\mathcal{D}(\mathcal{G}(\mathbf{z})))d\mathbf{z}
 =
@@ -157,5 +158,3 @@ For clarity we rename $p_{X}(\mathbf{x})$ as $p_{g}(\mathbf{x})$ since it repres
 $$
 \color{orange}{p_{g}(\mathbf{x}) = p_{\mathbf{z}}(\mathbf{z})\frac{1}{\mathcal{G}^{'}(\mathcal{G}^{-1}(\mathbf{x}))}}
 $$
-
-Ooook, we have finally proved that
