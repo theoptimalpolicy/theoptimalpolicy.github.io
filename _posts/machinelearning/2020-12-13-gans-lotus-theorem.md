@@ -13,7 +13,7 @@ mathjax: true
 
 
 
-In this brief we want to prove a passage of the original GANs Paper by Ian Goodfellow. Specifically, we want to prove that the following equation is sarisfied:
+In this brief we want to prove a passage of the original GANs Paper by Ian Goodfellow (check [this](https://theoptimalpolicy.github.io/2020/12/15/gans-1/) one if you want a full overview of the paper). Specifically, we want to prove that the following equation is satisfied:
 
 $$
 \int_{\mathbf{z}}p_{z}(\mathbf{z})\log(1-\mathcal{D}(\mathcal{G}(\mathbf{z})))d\mathbf{z}
