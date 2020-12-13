@@ -21,8 +21,6 @@ $$
 
 We are conditioning on $X>t$ because we want to condition our probability on the fact that the event *hasn't occurred yet*.
 
-It's important to note that $h(t)$ doesn't represent a probability, it can assume values bigger than $1$.
-
 Is there a way to rewrite $h(t)$ in a different way?
 
 $$
