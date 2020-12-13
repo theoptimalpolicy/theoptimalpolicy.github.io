@@ -10,56 +10,52 @@ tags:
 mathjax: true
 ---
 
-- We are always talking about *Classification*.
+Let's start with some definitions:
 
-- When counting the number of hypothesis, the entire input space is taken into consideration. In the case of a perceptron, each perceptron differs from another if they differ in at least one input point, and since the input is continuous, there are an infinite number of different perceptrons. (e.g. in a 2D space you can draw an infinite number of different lines)
+A *hypothesis* is a function that maps an input from the entire *input space* to a result:
+$$
+h:\mathcal{X}\to\{-1,+1\}
+$$
+The number of hypotheses $\vert\mathcal{H}\vert$ can be infinite.
 
-	Instead of counting the number of hypothesis in the entire input space, we are going to restrict the count only to the samples: a *finite* set of input points. Then, simply count the number of the possible *dichotomies*. A dichotomy is like a mini-hypothesis, it’s a *configuration of labels* on the sample’s input points.
+A *dichotomy* is a hypothesis that maps from an input from the *sample size* to a result:
 
-	A *hypothesis* is a function that maps an input from the entire *input space* to a result:
-	$$
-	h:\mathcal{X}\to\{-1,+1\}
-	$$
-	The number of hypotheses $\vert\mathcal{H}\vert$ can be infinite.
+$$
+h:\{\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N\}\to\{-1,+1\}
+$$
 
-	A *dichotomy* is a hypothesis that maps from an input from the *sample size* to a result:
+The number of *dichotomies* $\vert\mathcal{H}\{\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N\}\vert$ is at most $2^N$, where $N$ is the sample size.
 
-	$$
-	h:\{\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N\}\to\{-1,+1\}
-	$$
+e.g. for a sample size $N = 3$ we have at most $8$ possible dichotomies:
 
-	The number of *dichotomies* $\vert\mathcal{H}\{\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N\}\vert$ is at most $2^N$, where $N$ is the sample size.
+```
+	x1 x2 x3
+1	-1 -1 -1
+2	-1 -1 +1
+3	-1 +1 -1
+4	-1 +1 +1
+5	+1 -1 -1 
+6	+1 -1 +1
+7	+1 +1 -1
+8	+1 +1 +1
 
-	e.g. for a sample size $N = 3$ we have at most $8$ possible dichotomies:
+```
 
-	```
-		x1 x2 x3
-	1	-1 -1 -1
-	2	-1 -1 +1
-	3	-1 +1 -1
-	4	-1 +1 +1
-	5	+1 -1 -1 
-	6	+1 -1 +1
-	7	+1 +1 -1
-	8	+1 +1 +1
-	
-	```
+The *growth function* is a function that counts the *most* dichotomies on any $N$ points.
+$$
+m_{\mathcal{H}}(N)=\underset{\mathbf{x}_1,\dots,\mathbf{x}_N\in\mathcal{X}}{max}\vert\mathcal{H}(\mathbf{x}_1,\dots,\mathbf{x}_N)\vert
+$$
+This translates into choosing any $N$ points and laying them out in *any* fashion in the input space. Determining $m$ is equivalent to looking for such a layout of the $N$ points that yields the *most* dichotomies. 
 
-- The *growth function* is a function that counts the *most* dichotomies on any $N$ points.
-	$$
-	m_{\mathcal{H}}(N)=\underset{\mathbf{x}_1,\dots,\mathbf{x}_N\in\mathcal{X}}{max}\vert\mathcal{H}(\mathbf{x}_1,\dots,\mathbf{x}_N)\vert
-	$$
-	This translates into choosing any $N$ points and laying them out in *any* fashion in the input space. Determining $m$ is equivalent to looking for such a layout of the $N$ points that yields the *most* dichotomies. 
+The growth function satisfies:
+$$
+m_{\mathcal{H}}(N)\le 2^N
+$$
+This can be applied to the perceptron. For example, when $N=4$, we can lay out the points so that they are easily separated. However, given a layout, we must then consider all possible configurations of labels on the points, one of which is the following:
 
-	The growth function satisfies:
-	$$
-	m_{\mathcal{H}}(N)\le 2^N
-	$$
-	This can be applied to the perceptron. For example, when $N=4$, we can lay out the points so that they are easily separated. However, given a layout, we must then consider all possible configurations of labels on the points, one of which is the following:
+<img src="/img/posts/vc-dimension/perc.png" style="zoom:75%"/>
 
-	<img src="/img/posts/vc-dimension/perc.png" style="zoom:75%"/>
-
-	This is where the perceptron breaks down because it *cannot* separate that configuration, and so $m_{\mathcal{H}}(4)=14$ because two configurations—this one and the one in which the left/right points are blue and top/bottom are red—cannot be represented. For this reason, we have to expect that for perceptrons, $m$ can’t be $2^4$.
+This is where the perceptron breaks down because it *cannot* separate that configuration, and so $m_{\mathcal{H}}(4)=14$ because two configurations—this one and the one in which the left/right points are blue and top/bottom are red—cannot be represented. For this reason, we have to expect that for perceptrons, $m$ can’t be $2^4$.
 
 The *VC* ( *Vapnik-Chervonenkis ) dimension* of a hypothesis set $\mathcal{H}$ , denoted by $d_{VC}(\mathcal{H})$ is the largest value of $N$ for which $m_{\mathcal{H}}(N)=2^N$  , in other words is "*the most points $\mathcal{H}$ can shatter* " 
 
