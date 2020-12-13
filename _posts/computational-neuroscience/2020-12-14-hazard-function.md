@@ -34,7 +34,7 @@ It is easy to see that $(t<X<t+\Delta t)$ is just a subset of $X>t$
 
 ```
     O---------------------- {     X > t    }
-    |		    o-------------- { t < X < t+Δt }
+    |       o-------------- { t < X < t+Δt }
     |       |	 	
 ----.-------.----.---------
     t       X   t+Δt
