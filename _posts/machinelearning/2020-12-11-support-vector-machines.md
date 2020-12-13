@@ -7,7 +7,7 @@ header-style: text
 tags:
   - Machine Learning
   - Kernel Methods
-  - Binary Classification
+  - Classification
 mathjax: true
 ---
 
