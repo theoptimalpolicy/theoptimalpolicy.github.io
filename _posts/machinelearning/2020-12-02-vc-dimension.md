@@ -29,7 +29,7 @@ The number of *dichotomies* $\vert\mathcal{H}\{\mathbf{x}_1,\mathbf{x}_2,\dots,\
 e.g. for a sample size $N = 3$ we have at most $8$ possible dichotomies:
 
 ```
-	x1 x2 x3
+	 x1 x2 x3
 1	-1 -1 -1
 2	-1 -1 +1
 3	-1 +1 -1
