@@ -24,7 +24,7 @@ $$
 h:\{\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N\}\to\{-1,+1\}
 $$
 
-The number of *dichotomies* $\vert\mathcal{H} \{\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N \}\vert$ is at most $2^N$, where $N$ is the sample size.
+The number of *dichotomies* $\vert\mathcal{H}(\mathbf{x}_1,\mathbf{x}_2,\dots,\mathbf{x}_N )\vert$ is at most $2^N$, where $N$ is the sample size.
 
 e.g. for a sample size $N = 3$ we have at most $8$ possible dichotomies:
 
