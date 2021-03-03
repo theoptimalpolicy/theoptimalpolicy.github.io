@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ---
-=======
-```
->>>>>>> 6d718d15be31a404ddc69f0e6158f88a462893c2
 title: "How do we call a C function from Python?"
 subtitle: "Need to speed up things by calling a C function from your Python script? Check this."
 layout: post
@@ -13,11 +9,7 @@ tags:
   - C
   - Python
 mathjax: true
-<<<<<<< HEAD
 ---
-=======
-```
->>>>>>> 6d718d15be31a404ddc69f0e6158f88a462893c2
 
 This will be a really short blogpost which mainly serves as a personal reminder on how to call a C function from Python... the title is pretty self-explanatory.
 
