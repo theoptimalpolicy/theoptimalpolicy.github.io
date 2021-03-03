@@ -48,8 +48,8 @@ double dotproduct(int dim, double a[dim], double b[dim]){
 double * elementwiseproduct(int dim, double a[dim], double b[dim]){
     // Compute the elementiwise product between two vectors...
     // e.g. a = [1,2,3,4] , b = [4,3,2,1]
-    // res will point to an array such as [1*4, 2*3, 3*2, 4*1] = []
-	double * res = (double *) malloc(sizeof(double) * dim);
+    // res will point to an array such as [1*4, 2*3, 3*2, 4*1] = [4,6,6,4]
+    double * res = (double *) malloc(sizeof(double) * dim);
     for(int i = 0; i < dim; i++){
         res[i] = a[i]*b[i];
     }    
